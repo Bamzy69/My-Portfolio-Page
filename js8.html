@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8">
+<meta charset="viewport" content="width=device-width", initial scale="1.0">
+<title>Rock, Paper, Scissors</title>
+<style>
+h2{
+    text-align: center;
+}
+</style>
+    </head>
+<body>
+    <h2>Leaderboard</h2>
+<script>
+"use strict"
+let playAgain = "Y";
+let choices = ["rock", "paper", "scissors"];
+let wins=0;
+let losses=0;
+let ties=0;
+   
+    while ( playAgain==="Y"){
+    let Ai = choices[Math.floor(Math.random()*3)];
+    console.log(Ai);
+        let User = prompt(`rock, paper, scissors, GO!!!`);
+        if(choices.includes(User)){
+        }else{
+            alert(`Invalid input. Please type rock, paper, or scissors.`);
+        continue;
+        }
+    
+        if ( Ai===User) {
+        alert(`it was a tie`);
+        ties++;
+        }
+    else if (
+        (User=== "rock" && Ai==="scissors") || 
+        (User==="paper" && Ai==="rock") || 
+        (User==="scissors" && Ai==="paper")
+
+    ){ 
+        alert(`You win! ${User} beats ${Ai}`);
+        wins++;
+    } else {
+        alert(`You lose! ${Ai} beats ${User}`);
+        losses++;
+    }
+  playAgain=prompt(`Do you want to play again, Y/N?`);
+}
+document.write(`Wins: ${wins} <br> Losses: ${losses} <br> Ties:${ties}`);
+</script>
+</body>
+</html>

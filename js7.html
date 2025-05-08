@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8">
+<meta charset="viewport" content="width=device-width", initial scale="1.0">
+<title>Array</title>
+<style>
+h2{
+    text-align: center;
+}
+</style>
+    </head>
+<body>
+    <h2>My Favorite Movies</h2>
+<script>
+"use strict"
+ let favoriteMovies = ["Fear street", "Night School","Jumanji","Central Intelligence", "Terminator"];
+ favoriteMovies.sort();
+let movies;
+for(let ct=1; ct<=5; ct++) {
+    movies=prompt(`Enter your favorite movie here:`);
+    favoriteMovies.push(movies);
+    favoriteMovies.sort();
+};
+
+for(let i=1; i<=favoriteMovies.length; i++ ) {
+    console.log(favoriteMovies[i]);
+}
+    
+
+
+favoriteMovies.forEach(value =>{ 
+document.write(`I love ${value} <br>`);
+});
+</script>
+</body>
+</html>
